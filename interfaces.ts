@@ -17,6 +17,15 @@ const oldCivic = {
   },
 };
 
+const drink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `my drink has ${this.sugar} grams of sugar`;
+  },
+};
+
 const printVehicle = (vehicle: Vehicle): void => {
   console.log(`Name: ${vehicle.name}`);
   console.log(`Year: ${vehicle.year}`);
@@ -31,4 +40,5 @@ function printSummary(item: Reportable): void {
 printVehicle(oldCivic);
 printSummary(oldCivic);
 
+printSummary(drink);
 // oldCivic can be passed into both because the condition of the interface are met.
